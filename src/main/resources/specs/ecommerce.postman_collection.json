@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "ae67503a-e046-4f3a-99d4-8588572dc53f",
+		"name": "ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12865410"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test\",\n    \"description\": \"Description B\",\n    \"unitPrice\": 1000000,\n    \"quantityInStock\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/products/bd8653ad-1bff-4005-a4b3-c8d285c3cdb0",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"bd8653ad-1bff-4005-a4b3-c8d285c3cdb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAlls",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/products?keySearch=A",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNo",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "keySearch",
+									"value": "A"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOne",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/products/d801d719-cfda-40f4-bc67-9b8fa32ff46b",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"d801d719-cfda-40f4-bc67-9b8fa32ff46b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/products/bd8653ad-1bff-4005-a4b3-c8d285c3cdb0",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"bd8653ad-1bff-4005-a4b3-c8d285c3cdb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test\",\n    \"description\": \"Description E\",\n    \"unitPrice\": 1000000,\n    \"quantityInStock\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/products",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerName\": \"customer-update\",\n    \"deliveryAddress\": \"HN-VN\",\n    \"customerEmail\": \"az@gmail.com\",\n    \"phoneNumber\": \"012345678\",\n    \"status\": \"NEW\",\n    \"orderDetails\": [\n        {\n            \"productId\": \"2c2594bc-2391-4699-8327-42b723a8d573\",\n            \"customerNote\": \"newaas\",\n            \"quantity\": 5\n        },\n        {\n            \"productId\": \"d801d719-cfda-40f4-bc67-9b8fa32ff46b\",\n            \"customerNote\": \"sub-\",\n            \"quantity\": 3\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/orders/ea780dce-8a02-4706-b629-da8987e2b90e",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"ea780dce-8a02-4706-b629-da8987e2b90e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/orders?orderId=9a970a66-06d5-497b-acd1-3f5c792cb2a8",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "customerName",
+									"value": "customer",
+									"disabled": true
+								},
+								{
+									"key": "orderId",
+									"value": "9a970a66-06d5-497b-acd1-3f5c792cb2a8"
+								},
+								{
+									"key": "pageNo",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOne",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/orders/ea780dce-8a02-4706-b629-da8987e2b90e",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"ea780dce-8a02-4706-b629-da8987e2b90e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerName\": \"customer\",\n    \"deliveryAddress\": \"HN-VN\",\n    \"customerEmail\": \"az@gmail.com\",\n    \"phoneNumber\": \"012345678\",\n    \"status\": \"NEW\",\n    \"orderDetails\": [\n        {\n            \"productId\": \"91a45c8e-2eee-4ba6-8497-ed803b065efd\",\n            \"customerNote\": \"note\",\n            \"quantity\": 2\n        },\n        {\n            \"productId\": \"d587049e-524d-4c38-bec9-e9ce5208c664\",\n            \"customerNote\": \"note\",\n            \"quantity\": 3\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/orders",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "internal-token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiaWFjczdtMEdmcjVGSmRpWWV6NVp2cXZoWEI4QXhkNVdBN2RpMWtTVDRuSnhWTjlWMEhUM2tKRUIyb3hSTWdwR2hxRTg1aTZ5S1RWazdoYlVNclRyeHpqaWJBZm5GbGlCNVowekJBc2t1MDNxZ0huZHJkMjFoNWVETGlpbkdjRGs2dFNqTGptSkk1WGNub2lZREIxeTBKaG5FYVdRYWluT3VBdTRNandlNlBSdFVXdzVTRUgxZ3dqU0t6N1dINm50OElPZzU2QXoiLCJzdWIiOiJ0YW1sZCJ9.L5QagSJPMrSh6BisKOUg8_KQDQTqON86wSsm4UAMkS",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://kube-dev.io:8080/api/orders/all",
+							"protocol": "http",
+							"host": [
+								"kube-dev",
+								"io"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
