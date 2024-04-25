@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  application:
+    name: ecommerce-service
+  cloud:
+      config:
+        enabled: false
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  datasource:
+    driverClassName: ${JDBC_DATABASE_DRIVER:org.postgresql.Driver}
+    url: ${JDBC_DATABASE_URL:jdbc:postgresql://127.0.0.1:5432/postgres?currentSchema=ecommerce}
+    username: ${JDBC_DATABASE_USERNAME:tamld}
+    password: ${JDBC_DATABASE_PASSWORD:123456}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        format_sql: true
+        default_schema: ${SCHEMA:ecommerce}
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: TRACE
+    org.springframework.security: TRACE
+    org.springframework.security.oauth2: TRACE
+
